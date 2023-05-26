@@ -42,6 +42,7 @@
 		D477C95F2A202CC100D308D1 = {
 			isa = PBXGroup;
 			children = (
+				D477C97F2A20309400D308D1 /* README.md */,
 				D477C96A2A202CC100D308D1 /* HackerNewsiOS */,
 				D477C9692A202CC100D308D1 /* Products */,
 			);
@@ -65,7 +66,6 @@
 				D477C9792A202D0500D308D1 /* HackerNewsPost.swift */,
 				D477C96F2A202CC300D308D1 /* Assets.xcassets */,
 				D477C9712A202CC300D308D1 /* Preview Content */,
-				D477C97F2A20309400D308D1 /* README.md */,
 			);
 			path = HackerNewsiOS;
 			sourceTree = "<group>";
