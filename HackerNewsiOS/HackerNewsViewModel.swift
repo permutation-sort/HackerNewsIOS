@@ -22,6 +22,9 @@ class HackerNewsViewModel: ObservableObject {
                     let postIDsSlice = postIDs.prefix(10)
                     let group = DispatchGroup()
                     
+                    // Temporary array to store newly fetched posts
+                    var newPosts: [HackerNewsPost] = []
+                    
                     for postID in postIDsSlice {
                         group.enter()
                         
@@ -34,7 +37,8 @@ class HackerNewsViewModel: ObservableObject {
                                 do {
                                     let post = try JSONDecoder().decode(HackerNewsPost.self, from: postData)
                                     DispatchQueue.main.async {
-                                        self.hackerNewsPosts.append(post)
+                                        // Append to the temporary array
+                                        newPosts.append(post)
                                     }
                                 } catch {
                                     print("Error decoding post data: \(error)")
@@ -44,7 +48,10 @@ class HackerNewsViewModel: ObservableObject {
                     }
                     
                     group.notify(queue: DispatchQueue.main) {
-                        // All posts fetched
+                        // Replace hackerNewsPosts with newPosts once all posts are fetched
+                        DispatchQueue.main.async {
+                            self.hackerNewsPosts = newPosts
+                        }
                     }
                 } catch {
                     print("Error decoding post IDs: \(error)")
