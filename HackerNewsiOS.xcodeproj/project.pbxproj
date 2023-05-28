@@ -26,6 +26,7 @@
 		D477C97B2A202D1D00D308D1 /* HackerNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerNewsViewModel.swift; sourceTree = "<group>"; };
 		D477C97D2A202D2C00D308D1 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		D477C97F2A20309400D308D1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D477C9802A231F9F00D308D1 /* Privacy_Policy.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Privacy_Policy.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +43,7 @@
 		D477C95F2A202CC100D308D1 = {
 			isa = PBXGroup;
 			children = (
+				D477C9802A231F9F00D308D1 /* Privacy_Policy.md */,
 				D477C97F2A20309400D308D1 /* README.md */,
 				D477C96A2A202CC100D308D1 /* HackerNewsiOS */,
 				D477C9692A202CC100D308D1 /* Products */,
