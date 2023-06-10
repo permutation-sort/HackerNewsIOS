@@ -57,8 +57,10 @@ struct ContentView: View {
                 }
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle()) // New line added here
     }
 }
+
 struct DetailedView: View {
     let post: HackerNewsPost
     @Environment(\.presentationMode) var presentationMode

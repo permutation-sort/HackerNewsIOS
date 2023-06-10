@@ -3,6 +3,9 @@ import Foundation
 
 class HackerNewsViewModel: ObservableObject {
     @Published var hackerNewsPosts: [HackerNewsPost] = []
+    // STAR FEATURE
+    @Published var favoritePostsIDs: [UUID] = []
+
     
     func fetchHackerNewsPosts() {
         guard let url = URL(string: "https://hacker-news.firebaseio.com/v0/topstories.json") else {
@@ -59,4 +62,13 @@ class HackerNewsViewModel: ObservableObject {
             }
         }.resume()
     }
+    // STAR FEATURE
+    func toggleFavorite(post: HackerNewsPost) {
+        if let index = self.favoritePostsIDs.firstIndex(of: post.id) {
+            self.favoritePostsIDs.remove(at: index)
+        } else {
+            self.favoritePostsIDs.append(post.id)
+        }
+    }
+
 }
